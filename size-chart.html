@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Chart - Isabelle Concept & Prints</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles for size chart page */
+        .size-guide-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .size-guide-header h1 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .size-guide-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .size-chart-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .size-chart-item {
+            border: 1px solid #e1e1e1;
+            margin-bottom: 20px;
+        }
+        
+        .size-chart-header {
+            padding: 15px 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .size-chart-header h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+        }
+        
+        .size-chart-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .size-chart-item.active .size-chart-content {
+            padding: 20px;
+            max-height: 2000px;
+        }
+        
+        .size-chart-item.active .size-chart-header {
+            border-bottom: 1px solid #e1e1e1;
+        }
+        
+        .size-chart-item.active .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+        
+        .size-chart-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .size-chart-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .size-chart-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .size-chart-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .product-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .product-features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .product-features li i {
+            color: #000;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .size-chart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .size-chart-table th, .size-chart-table td {
+            border: 1px solid #e1e1e1;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .size-chart-table th {
+            background-color: #f5f5f5;
+            font-weight: 500;
+        }
+        
+        .size-chart-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .size-chart-note {
+            font-size: 12px;
+            color: #777;
+            margin-top: 10px;
+        }
+        
+        .view-all-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Isabelle Concept & Prints</h1>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="products.html">COLLECTION</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <a href="account.html" class="icon-link"><i class="fas fa-user"></i></a>
+                    <a href="cart.html" class="icon-link cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Size Guide Section -->
+    <section class="size-guide-section">
+        <div class="container">
+            <div class="size-guide-header">
+                <h1>PRODUCT SIZE GUIDE</h1>
+            </div>
+            
+            <div class="size-guide-intro">
+                <p>Please send us a message through our <a href="contact.html">Contact Form</a> or email info@isabelleprints.com if you have any sizing questions. We're always eager to help.</p>
+            </div>
+            
+            <div class="size-chart-accordion">
+                <!-- Business Cards Size Chart -->
+                <div class="size-chart-item active">
+                    <div class="size-chart-header">
+                        <h3>BUSINESS CARDS</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="size-chart-content">
+                        <div class="size-chart-flex">
+                            <div class="size-chart-info">
+                                <h4>Standard Business Card</h4>
+                                <ul class="product-features">
+                                    <li><i class="fas fa-check"></i> 350gsm silk card stock</li>
+                                    <li><i class="fas fa-check"></i> Full color printing on both sides</li>
+                                    <li><i class="fas fa-check"></i> Matte or glossy finish options</li>
+                                    <li><i class="fas fa-check"></i> Standard size: 3.5" x 2"</li>
+                                    <li><i class="fas fa-check"></i> Rounded corners option available</li>
+                                </ul>
+                                
+                                <h4>Available Sizes</h4>
+                                <table class="size-chart-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Size Name</th>
+                                            <th>Width</th>
+                                            <th>Height</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Standard</td>
+                                            <td>3.5"</td>
+                                            <td>2"</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Square</td>
+                                            <td>2.5"</td>
+                                            <td>2.5"</td>
+                                        </tr>
+                                        <tr>
+                                            <td>European</td>
+                                            <td>3.35"</td>
+                                            <td>2.17"</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Slim</td>
+                                            <td>3.5"</td>
+                                            <td>1.5"</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Folded</td>
+                                            <td>3.5" (7" open)</td>
+                                            <td>2"</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="size-chart-note">*All measurements are in inches</p>
+                            </div>
+                            <div class="size-chart-image">
+                                <img src="images/business-card-size-chart.jpg" alt="Business Card Size Chart">
+                                <a href="products.html?category=business-cards" class="btn secondary-btn view-all-btn">View All Business Cards</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Flyers Size Chart -->
+                <div class="size-chart-item">
+                    <div class="size-chart-header">
+                        <h3>FLYERS</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="size-chart-content">
+                        <div class="size-chart-flex">
+                            <div class="size-chart-info">
+                                <h4>Standard Flyers</h4>
+                                <ul class="product-features">
+                                    <li><i class="fas fa-check"></i> 100lb gloss text or 80lb matte text</li>
+                                    <li><i class="fas fa-check"></i> Full color printing on one or both sides</li>
+                                    <li><i class="fas fa-check"></i> Multiple size options</li>
+                                    <li><i class="fas fa-check"></i> Fast turnaround time</li>
+                                </ul>
+                                
+                                <h4>Available Sizes</h4>
+                                <table class="size-chart-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Size Name</th>
+                                            <th>Width</th>
+                                            <th>Height</th>
+                                            <th>Common Use</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Standard</td>
+                                            <td>8.5"</td>
+                                            <td>11"</td>
+                                            <td>Events, Promotions</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Half Page</td>
+                                            <td>5.5"</td>
+                                            <td>8.5"</td>
+                                            <td>Handouts, Menus</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quarter Page</td>
+                                            <td>4.25"</td>
+                                            <td>5.5"</td>
+                                            <td>Small Handouts</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Postcard</td>
+                                            <td>4"</td>
+                                            <td>6"</td>
+                                            <td>Mailers, Invitations</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Large Format</td>
+                                            <td>11"</td>
+                                            <td>17"</td>
+                                            <td>Posters, Announcements</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="size-chart-note">*All measurements are in inches</p>
+                            </div>
+                            <div class="size-chart-image">
+                                <img src="images/flyer-size-chart.jpg" alt="Flyer Size Chart">
+                                <a href="products.html?category=flyers" class="btn secondary-btn view-all-btn">View All Flyers</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Banners Size Chart -->
+                <div class="size-chart-item">
+                    <div class="size-chart-header">
+                        <h3>BANNERS</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="size-chart-content">
+                        <div class="size-chart-flex">
+                            <div class="size-chart-info">
+                                <h4>Vinyl Banners</h4>
+                                <ul class="product-features">
+                                    <li><i class="fas fa-check"></i> 13oz scrim vinyl material</li>
+                                    <li><i class="fas fa-check"></i> UV-resistant inks</li>
+                                    <li><i class="fas fa-check"></i> Waterproof and weather-resistant</li>
+                                    <li><i class="fas fa-check"></i> Grommets included</li>
+                                    <li><i class="fas fa-check"></i> Hemmed edges for durability</li>
+                                </ul>
+                                
+                                <h4>Common Sizes</h4>
+                                <table class="size-chart-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Size</th>
+                                            <th>Common Use</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2' x 4'</td>
+                                            <td>Small Events, Retail Displays</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3' x 6'</td>
+                                            <td>Medium Events, Storefronts</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4' x 8'</td>
+                                            <td>Large Events, Trade Shows</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5' x 10'</td>
+                                            <td>Outdoor Events, Construction Sites</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Custom Size</td>
+                                            <td>Available upon request</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="size-chart-note">*All measurements are in feet</p>
+                                <p>We also offer custom sizes to fit your specific needs. Contact us for a quote on custom dimensions.</p>
+                            </div>
+                            <div class="size-chart-image">
+                                <img src="images/banner-size-chart.jpg" alt="Banner Size Chart">
+                                <a href="products.html?category=banners" class="btn secondary-btn view-all-btn">View All Banners</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Custom Products Size Chart -->
+                <div class="size-chart-item">
+                    <div class="size-chart-header">
+                        <h3>CUSTOM PRODUCTS</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="size-chart-content">
+                        <div class="size-chart-flex">
+                            <div class="size-chart-info">
+                                <h4>Custom T-Shirts</h4>
+                                <table class="size-chart-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Size</th>
+                                            <th>Chest (inches)</th>
+                                            <th>Length (inches)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>S</td>
+                                            <td>36-38</td>
+                                            <td>28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>M</td>
+                                            <td>39-41</td>
+                                            <td>29</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L</td>
+                                            <td>42-44</td>
+                                            <td>30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>XL</td>
+                                            <td>45-47</td>
+                                            <td>31</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2XL</td>
+                                            <td>48-50</td>
+                                            <td>32</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <h4>Custom Mugs</h4>
+                                <table class="size-chart-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Capacity</th>
+                                            <th>Height</th>
+                                            <th>Diameter</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Standard Mug</td>
+                                            <td>11 oz</td>
+                                            <td>3.8"</td>
+                                            <td>3.2"</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Large Mug</td>
+                                            <td>15 oz</td>
+                                            <td>4.5"</td>
+                                            <td>3.4"</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Travel Mug</td>
+                                            <td>16 oz</td>
+                                            <td>7"</td>
+                                            <td>2.8"</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <p>For other custom products, please contact us for specific size information.</p>
+                            </div>
+                            <div class="size-chart-image">
+                                <img src="images/custom-products-size-chart.jpg" alt="Custom Products Size Chart">
+                                <a href="products.html?category=custom" class="btn secondary-btn view-all-btn">View All Custom Products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Isabelle Concept & Prints</h3>
+                    <p>Your one-stop shop for all your printing needs. We provide high-quality printing services with personalized designs.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html?category=business-cards">Business Cards</a></li>
+                        <li><a href="products.html?category=banners">Banners</a></li>
+                        <li><a href="products.html?category=flyers">Flyers</a></li>
+                        <li><a href="products.html?category=custom">Custom Designs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Print Street, Design City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@isabelleprints.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Isabelle Concept & Prints. All rights reserved.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // Size Chart Accordion Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sizeChartHeaders = document.querySelectorAll('.size-chart-header');
+            
+            sizeChartHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const sizeChartItem = this.parentElement;
+                    sizeChartItem.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
